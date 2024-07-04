@@ -1,0 +1,63 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header {
+    font-size: xx-large;
+    padding: 30px;
+    text-align: center;
+}
+.game-board {
+    display: flex;
+    padding: 30px;
+    gap: 50px;
+    
+}
+
+.player, .computer {
+    font-size: large;
+    text-align: center;
+    border: 2px solid black;
+    padding: 100px;
+    padding-top: 10px;
+    margin: 10px auto;
+}
+
+.player{
+    display: flex;
+    flex-direction: column;
+}
+
+.player-choices {
+    display: flex;
+}
+
+.player-selection {
+    flex-grow: 1;
+}
+
+.player-choices * {
+    margin: 3px auto;
+}
+
+.scoreboard {
+    border: 2px solid black;
+    font-size: large;
+    width : 100px;
+    text-align: center;
+    padding: 25px;
+    display: flex;
+    width: 100px;
+}
+
+.score-text { 
+    flex-grow: 1;
+    text-align: left;
+}
+
+.score {
+    border: 2px dotted black;
+    padding: 10px;
+    /* margin-right: 2px; */
+}
