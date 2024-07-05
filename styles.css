@@ -24,21 +24,15 @@ body {
     margin: 10px auto;
 }
 
-.player{
-    display: flex;
-    flex-direction: column;
-}
+
 
 .player-choices {
     display: flex;
 }
 
-.player-selection {
-    flex-grow: 1;
-}
-
 .player-choices * {
-    margin: 3px auto;
+    margin: 8px;
+    padding: 0;
 }
 
 .scoreboard {
@@ -61,3 +55,4 @@ body {
     padding: 10px;
     /* margin-right: 2px; */
 }
+\

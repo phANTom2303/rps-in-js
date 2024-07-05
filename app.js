@@ -4,23 +4,25 @@ let computerScore = 0;
 let playerChoices = document.querySelector(".player-choices");
 playerChoices.addEventListener('click', (playerClicked) => {
     let whichButton = playerClicked.target;
-    let playerSelection = document.querySelector(".player-selection");
-    let playerMove
+    let playerMove;
     switch (whichButton.id) {
         case 'rock':
+        case 'rockImg':
             playerMove = 'Rock';
             break;
 
         case 'paper':
+        case 'paperImg':
             playerMove = 'Paper';
             break;
 
         case 'scissors':
+        case 'scisImg':
             playerMove = 'Scissors';
             break;
 
     }
-    playerSelection.textContent = playerMove;
+    updateImage('player',playerMove);
     run(playerMove);
 });
 
@@ -39,6 +41,16 @@ function updateComputerScore()
     computerScoreDisplay.textContent = computerScore;
 }
 
+function updateImage(moveOf, move)
+{
+    let classSelector = '.' + moveOf + '-selection';
+    // console.log(classSelector);
+    let container = document.querySelector(classSelector);
+    move = move.toLowerCase();
+    let filePath = './assets/' + move + '.png';
+    // console.log(filePath);
+    container.src = filePath;
+}
 
 function getComputeMove() {
     let number = Math.floor((Math.random() * 3) + 1);
@@ -54,8 +66,7 @@ function getComputeMove() {
             computerMove = "scissors";
             break;
     }
-    let computerSelction = document.querySelector(".computer-selction");
-    computerSelction.textContent = computerMove;
+    updateImage('computer',computerMove);
     return computerMove;
 }
 
