@@ -1,7 +1,7 @@
 A simple console based rock paper scissors game using javascript
 
 
-# Asset Attributions:
+###### Asset Attributions:
 
 <html>
 - <a target="_blank" href="https://icons8.com/icon/16463/rock">Rock</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
