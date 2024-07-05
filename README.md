@@ -1,5 +1,6 @@
-A simple console based rock paper scissors game using javascript
+A simple console based rock paper scissors game. Made to learn DOM Manipulation
 
+View Live : https://phantom2303.github.io/rps-in-js/
 
 ###### Asset Attributions:
 
