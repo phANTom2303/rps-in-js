@@ -10,21 +10,37 @@ body {
 }
 .game-board {
     display: flex;
+    flex-wrap: wrap;
     padding: 30px;
     gap: 50px;
-    
 }
 
-.player, .computer {
+img {
+    width: 65px;
+    height: 65px;
+}
+
+button img {
+    width: 45px;
+    height: 45px;
+}
+
+.game-box {
     font-size: large;
     text-align: center;
     border: 2px solid black;
-    padding: 100px;
-    padding-top: 10px;
     margin: 10px auto;
+    width: 150px;
 }
 
+.box-header {
+    display: flex;
+}
 
+.box-title {
+    margin-right: auto;
+    padding: 10px;
+}
 
 .player-choices {
     display: flex;
@@ -35,15 +51,6 @@ body {
     padding: 0;
 }
 
-.scoreboard {
-    border: 2px solid black;
-    font-size: large;
-    width : 100px;
-    text-align: center;
-    padding: 25px;
-    display: flex;
-    width: 100px;
-}
 
 .score-text { 
     flex-grow: 1;
@@ -55,4 +62,3 @@ body {
     padding: 10px;
     /* margin-right: 2px; */
 }
-\
