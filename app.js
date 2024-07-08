@@ -22,27 +22,30 @@ playerChoices.addEventListener('click', (playerClicked) => {
             break;
 
     }
-    updateImage('player',playerMove);
+    updateImage('player', playerMove);
     run(playerMove);
 });
 
 let playerScoreDisplay = document.querySelector("#player-score");
 let computerScoreDisplay = document.querySelector("#computer-score");
+function changeColour(colourOf, colour) {
+    const className = "." + colourOf;
+    const box = document.querySelector(className);
+    const attribute = "border : 2px solid " + colour + ";";
+    box.setAttribute("style", attribute);
+}
 
-function updatePlayerScore()
-{
+function updatePlayerScore() {
     playerScore++;
     playerScoreDisplay.textContent = playerScore;
 }
 
-function updateComputerScore()
-{
+function updateComputerScore() {
     computerScore++;
     computerScoreDisplay.textContent = computerScore;
 }
 
-function updateImage(moveOf, move)
-{
+function updateImage(moveOf, move) {
     let classSelector = '.' + moveOf + '-selection';
     // console.log(classSelector);
     let container = document.querySelector(classSelector);
@@ -66,7 +69,7 @@ function getComputeMove() {
             computerMove = "scissors";
             break;
     }
-    updateImage('computer',computerMove);
+    updateImage('computer', computerMove);
     return computerMove;
 }
 
@@ -75,16 +78,22 @@ function compare(player, comp) {
     let p = "paper";
     let s = "scissors";
     player = player.toLowerCase();
-    if (player == comp)
+    if (player == comp) {
+        changeColour("player", "#cf9313");
+        changeColour("computer", "#cf9313");
         return "draw";
+    }
     else {
         if ((player === r && comp === s) || (player === s && comp === p) || (player === p && comp === r)) {
-            
+            changeColour("player", "green");
+            changeColour("computer", "red");
             updatePlayerScore();
             return "player";
 
         }
         else {
+            changeColour("player", "red");
+            changeColour("computer", "green");
             updateComputerScore();
             return "computer";
 
